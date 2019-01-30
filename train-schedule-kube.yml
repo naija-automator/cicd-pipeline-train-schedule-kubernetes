@@ -8,8 +8,8 @@ spec:
     app: train-schedule
   ports:
   - protocol: TCP
-    port: 30010
-    nodePort: 30010
+    port: 32010
+    nodePort: 32010
 
 ---
 
@@ -33,4 +33,4 @@ spec:
       - name: train-schedule
         image: $DOCKER_IMAGE_NAME:$BUILD_NUMBER
         ports:
-        - containerPort: 8080
+        - containerPort: 32010
